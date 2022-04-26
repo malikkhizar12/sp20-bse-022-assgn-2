@@ -130,6 +130,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String a=txt1.getText().toString();
+
                 if (a.equals(num))
                 {
 
@@ -138,11 +139,17 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    count++;
-                    if (count>3)
+                    if(a!=num)
                     {
-                        finish();
+                        txt1.setText("");
+                        count++;
+                        if (count>3)
+                        {
+                            finish();
+                        }
                     }
+
+
                 }
             }
         });
